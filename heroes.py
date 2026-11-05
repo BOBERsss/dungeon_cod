@@ -1,5 +1,6 @@
 import random
 from characters import Character
+from items import Inventory
 
 
 class Hero(Character):
@@ -7,6 +8,7 @@ class Hero(Character):
 
     def __init__(self, name, max_hp, attack):
         super().__init__(name, max_hp, attack)
+        self.inventory = Inventory()
 
     def special(self, target):
         return self.hit(target)

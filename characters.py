@@ -1,3 +1,5 @@
+from utils import log_action
+
 class Character:
     def __init__(self, name, max_hp, attack):
         self.name = name
@@ -18,6 +20,7 @@ class Character:
     def take_damage(self, amount):
         self.hp -= amount
 
+    @log_action
     def hit(self, target):
         target.take_damage(self.attack)
         return self.attack
