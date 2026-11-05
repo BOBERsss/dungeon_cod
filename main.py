@@ -1,4 +1,3 @@
-
 from battle import fight
 from heroes import Mag
 from loot import enemy_generator, loot_generator
@@ -27,7 +26,11 @@ for room in range(1, 4):
 print(f"\nEnemies defeated: {defeated}")
 best = sorted(hero.inventory.items, key=lambda item: item.power, reverse=True)[:3]
 print("Strongest items:", [item.name for item in best])
+
+# Додано підрахунок та виведення загального паверу всіх предметів в інвентарі
+total_power = sum(item.power for item in hero.inventory.items)
+print("Загальний павер предметів:", total_power)
+
 print("Attacks in the log:", len(BATTLE_LOG))
 print("Last entry:", BATTLE_LOG[-1])
-
 
