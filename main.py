@@ -1,4 +1,4 @@
-<<<<<<< HEAD
+
 from battle import fight
 from heroes import Mag
 from loot import enemy_generator, loot_generator
@@ -29,18 +29,5 @@ best = sorted(hero.inventory.items, key=lambda item: item.power, reverse=True)[:
 print("Strongest items:", [item.name for item in best])
 print("Attacks in the log:", len(BATTLE_LOG))
 print("Last entry:", BATTLE_LOG[-1])
-=======
-from heroes import CLASSES, create_hero, show_hero
 
-print("Ласкаво просимо до Dungeon Code!")
-print("Доступні класи:", ", ".join(CLASSES))
 
-name = input("Як звати твого героя? ")
-hero_class = input("Обери клас: ")
-
-if hero_class in CLASSES:
-    hero = create_hero(name, hero_class)
-    show_hero(hero)
-else:
-    print("Такого класу немає. Спробуй ще раз!")
->>>>>>> a98df0f10a725686a0a0a91f02d96a507ef22ed2

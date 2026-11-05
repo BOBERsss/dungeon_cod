@@ -5,7 +5,7 @@ def fight(hero, enemy):
     """Проводить бій. Повертає True, якщо герой переміг."""
     round_no = 1
     while hero.is_alive() and enemy.is_alive():
-        if round_no % 3 == 0:
+        if round_no % 5 == 0:
             damage = hero.special(enemy)
         else:
             damage = hero.hit(enemy)
